@@ -44,7 +44,8 @@ body {
   border-radius: 7px;
 }
 
-#explore-body .fas {
+#explore-body .fas,
+#share-body .fas {
   color: #fff;
   background: #333;
   padding: 5px;
