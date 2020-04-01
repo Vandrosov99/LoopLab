@@ -31,15 +31,19 @@ body {
 #home-section .home-inner {
   padding-top: 150px;
 }
+
 #home-section .card-form {
   opacity: 0.9;
 }
-#home-section .fas {
+
+#home-section .fas,
+#create-body .fas {
   color: #008ed6;
   background: #fff;
   padding: 5px;
   border-radius: 7px;
 }
+
 #explore-body .fas {
   color: #fff;
   background: #333;
