@@ -14,9 +14,9 @@
   <title>LoopLab</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-nav" id="home">
   <!-- navbar -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav id="main-nav" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container">
       <a href="index.html" class="navbar-brand">LoopLab</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -354,7 +354,22 @@
     <script>
       // Получаем год(который на компе) для footer copyright
       $('#year').text(new Date().getFullYear());
+      // инициализация скрола
+      $('bdoy').scrollspy({target:'main-nav'});
+      $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
 
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
     </script>
   </body>
 </html>
